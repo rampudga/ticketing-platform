@@ -267,12 +267,3 @@ Phase 3:
 - Review and rating system
 
 
-## 🙏 Acknowledgments
-
-Thank you for reviewing this project. I'm excited to discuss the implementation details, technical decisions, and potential improvements during the interview.
-
----
-
-Questions? Feel free to reach out via email or LinkedIn!
-
----
