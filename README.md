@@ -11,76 +11,12 @@ This ticketing platform features:
 
 Built with: PHP, MySQL, JavaScript, jQuery, HTML/CSS
 
----
-
 ## 🚀 Quick Setup
 
 ### Prerequisites
 - XAMPP (with PHP 8.x and MySQL)
 - Web browser
 
-### Installation Steps
-
-1. Extract & Place Files
-```
-Extract ZIP to: C:\xampp\htdocs\ticketing-platform
-```
-
-2. Create Database
-- Open: `http://localhost/phpmyadmin`
-- Create new database: `ticketing_platform`
-- Click Import tab
-- Select file: `ticketing_platform.sql`
-- Click Go
-
-3. Configure Database (if needed)
-
-Edit `includes/db.php` if your MySQL settings differ:
-```php
-define('DB_HOST', 'localhost');
-define('DB_USER', 'root');
-define('DB_PASS', '');           
-define('DB_NAME', 'ticketing_platform');
-define('DB_PORT', 3307);         
-```
-
-4. Set Permissions
-
-Ensure `assets/uploads/` folder is writable for image uploads.
-
-5. Start Application
-- Start Apache & MySQL in XAMPP
-- Organizer: `http://localhost/ticketing-platform/organizer.php`
-- Buyer: `http://localhost/ticketing-platform/index.php`
-
----
-
-## 📁 Project Structure
-
-```
-ticketing-platform/
-├── api/                      # 8 RESTful API endpoints
-│   ├── create_ticket.php     # Create new ticket
-│   ├── get_tickets.php       # Retrieve tickets
-│   ├── update_ticket.php     # Update ticket
-│   ├── delete_ticket.php     # Delete ticket
-│   ├── add_to_cart.php       # Add to shopping cart
-│   ├── get_cart.php          # Get cart items
-│   ├── remove_from_cart.php  # Remove from cart
-│   └── clear_cart.php        # Clear entire cart
-├── assets/
-│   ├── css/                  # Stylesheets
-│   ├── js/                   # JavaScript logic
-│   └── uploads/              # Uploaded images
-├── includes/
-│   └── db.php                # Database connection
-├── index.php                 # Buyer interface
-├── organizer.php             # Organizer dashboard
-├── ticketing_platform.sql    # Database schema
-└── README.md                 # This file
-```
-
----
 
 ## ✨ Key Features
 
@@ -99,18 +35,6 @@ ticketing-platform/
 ✅ Checkout Flow - Review order → Complete purchase → Success message  
 ✅ Session-based Cart - Persists across page navigation  
 
----
-
-## 🔒 Security Features
-
-- SQL Injection Prevention - Prepared statements with bound parameters
-- XSS Protection - HTML escaping on all outputs
-- File Upload Security - Type/size validation, unique filenames
-- Input Validation - Client-side and server-side checks
-- Session Security - Secure session handling
-
----
-
 ## 💾 Database Schema
 
 ### `tickets` Table
@@ -125,7 +49,6 @@ Key Fields: id, session_id, ticket_id, quantity, added_at
 
 Relationships: Foreign key to tickets table with cascade delete
 
----
 
 ## 🧪 Testing Guide
 
@@ -149,7 +72,6 @@ Relationships: Foreign key to tickets table with cascade delete
 9. Click "Complete Purchase"
 10. See success confirmation
 
----
 
 ## 🛠️ Technologies Used
 
@@ -169,7 +91,6 @@ Architecture:
 - MVC-inspired structure
 - Responsive design
 
----
 
 ## 🐛 Troubleshooting
 
@@ -193,58 +114,6 @@ Architecture:
 - If MySQL uses port 3307 instead of 3306
 - Update `DB_PORT` in `includes/db.php`
 
----
-
-## 📊 API Documentation
-
-### Ticket Management
-
-```http
-GET  /api/get_tickets.php              # Get all tickets
-GET  /api/get_tickets.php?filter=active # Get active tickets only
-POST /api/create_ticket.php            # Create new ticket
-POST /api/update_ticket.php            # Update existing ticket
-POST /api/delete_ticket.php            # Delete ticket
-```
-
-### Shopping Cart
-
-```http
-GET  /api/get_cart.php                 # Get cart items
-POST /api/add_to_cart.php              # Add item to cart
-POST /api/remove_from_cart.php         # Remove item from cart
-POST /api/clear_cart.php               # Clear entire cart
-```
-
-Response Format:
-```json
-{
-  "success": true,
-  "message": "Operation completed successfully",
-  "data": { ... }
-}
-```
-
----
-
-## 🎓 Technical Highlights
-
-1. Zero Page Reloads
-All CRUD operations and cart management use AJAX for seamless UX.
-
-2. Session-based Cart
-No login required - cart persists using PHP sessions.
-
-3. Image Management
-Automatic upload, validation, and cleanup on delete/update.
-
-4. Date Validation
-Server-side checks ensure tickets only show during sale period.
-
-5. Real-time Updates
-Dynamic DOM manipulation updates UI instantly.
-
----
 
 ## 🚀 Future Enhancements
 
@@ -267,12 +136,3 @@ Phase 3:
 - Review and rating system
 
 
-## 🙏 Acknowledgments
-
-Thank you for reviewing this project. I'm excited to discuss the implementation details, technical decisions, and potential improvements during the interview.
-
----
-
-Questions? Feel free to reach out via email or LinkedIn!
-
----
