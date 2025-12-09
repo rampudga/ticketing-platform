@@ -92,47 +92,7 @@ Architecture:
 - Responsive design
 
 
-## 🐛 Troubleshooting
-
-### Database Connection Failed
-- Verify MySQL is running in XAMPP
-- Check credentials in `includes/db.php`
-- Confirm database `ticketing_platform` exists
-
-### Image Upload Failed
-- Check `assets/uploads/` folder exists
-- Verify folder has write permissions
-- Ensure file is under 5MB
-- Use JPG, PNG, GIF, or WEBP format
-
-### Cart Not Working
-- Clear browser cookies
-- Check browser console for errors
-- Verify sessions are enabled in PHP
-
-### MySQL Port Error
-- If MySQL uses port 3307 instead of 3306
-- Update `DB_PORT` in `includes/db.php`
 
 
-## 🚀 Future Enhancements
-
-Phase 1:
-- User authentication system
-- Order history tracking
-- Email notifications
-- Payment gateway integration
-
-Phase 2:
-- Advanced search and filters
-- Analytics dashboard
-- QR code ticket generation
-- PDF ticket downloads
-
-Phase 3:
-- Multi-language support
-- Mobile app (React Native)
-- Social media integration
-- Review and rating system
 
 
